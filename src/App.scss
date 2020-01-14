@@ -1,0 +1,49 @@
+// .App {
+//   padding: 8px 10px;
+//   border: 1px solid #ccc;
+//   font-weight: bold;
+//   text-transform: uppercase;
+
+//   &:focus, &:active {
+//     outline: none;
+//   }
+
+//   &:hover {
+//     background: #f0ff1e;
+//   }
+// }
+
+
+.nav {
+  
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+
+    li {
+      margin-right: 15px;
+      text-transform: uppercase;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      font-weight: bold;
+      background-color: rgb(118, 203, 198);
+
+      &:focus, &:active {
+        outline: none;
+      }
+    
+      &:hover {
+        background: lightseagreen;
+      }
+    }
+
+    .navlink {
+      text-decoration: none;
+      color: rgb(94, 75, 140);
+    }
+  }
+}

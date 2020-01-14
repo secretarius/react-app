@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route, NavLink } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import News from './News/News'
+import Profile from './Profile/Profile'
+
+import "./App.scss";
+// import Person from "./Person/Person";
+
+class App extends Component {
+  render() {
+
+    return(
+      <div>
+        <nav className='nav'>
+        <ul>
+          <li>
+            <NavLink className='navlink' exact to='/'>Home</NavLink>
+          </li>
+          <li>
+            <NavLink className='navlink' to='/news'>News</NavLink>
+          </li>
+          <li>
+            <NavLink className='navlink' to='/profile'>Profile</NavLink>
+          </li>
+        </ul>
+        </nav>
+
+        <hr/>
+
+    <Route path='/' exact render={() => <h1>Home page works!</h1>} />
+    <Route path='/news' component={News} />
+    <Route path='/profile' component={Profile} />
+        {/* <News/>
+
+        <Profile/> */}
+      </div>
+    );
+
+  }
 }
 
-export default App;
+export default App
